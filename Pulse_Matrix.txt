@@ -1,0 +1,49 @@
+==========================================================
+PROJECT: AUTONOMOUS TRASH COLLECTOR - ROBOTIC ARM MATRIX
+==========================================================
+
+[ CONFIGURATION ]
+-----------------
+Controller: Arduino Uno + PCA9685
+Mode: PWM Pulse Control (Range 150 - 600)
+Axis: 3-DOF (Base, Shoulder, Elbow)
+
+[ STARTING / HOME POSITION ]
+----------------------------
+Base     (Ch 0): 520
+Shoulder (Ch 1): 110
+Elbow    (Ch 2): 230
+
+[ TARGET / PICK POSITION ]
+--------------------------
+Base     (Ch 0): 470
+Shoulder (Ch 1): 110
+Elbow    (Ch 2): 260
+
+[ FULL MOTION SEQUENCE (SIMULATION KEYFRAMES) ]
+-----------------------------------------------
+Sequence format: [ Base, Shoulder, Elbow ]
+
+Step 01: [ 110 , 200 , 260 ] (Pre-motion Alignment)
+Step 02: [ 110 , 170 , 260 ]
+Step 03: [ 110 , 140 , 260 ]
+Step 04: [ 110 , 110 , 260 ]
+Step 05: [ 140 , 110 , 260 ]
+Step 06: [ 170 , 110 , 260 ]
+Step 07: [ 200 , 110 , 260 ]
+Step 08: [ 230 , 110 , 260 ]
+Step 09: [ 260 , 110 , 260 ]
+Step 10: [ 290 , 110 , 260 ]
+Step 11: [ 320 , 110 , 260 ]
+Step 12: [ 350 , 110 , 260 ]
+Step 13: [ 380 , 110 , 260 ]
+Step 14: [ 410 , 110 , 260 ]
+Step 15: [ 440 , 110 , 260 ]
+Step 16: [ 470 , 110 , 260 ] (Final Pick Target)
+
+[ DISPOSAL / PLACE POSITION ]
+-----------------------------
+Base     (Ch 0): 180 (Rotate 180 Degrees to Back Container)
+Shoulder (Ch 1): 250 (Safety Lift Height)
+
+==========================================================
